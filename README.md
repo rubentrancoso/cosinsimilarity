@@ -29,11 +29,14 @@ spring.datasource.url = jdbc:mysql://localhost:3306/myschema
 spring.datasource.username = user
 spring.datasource.password = 123456
 
+## Running
+
 To run it, use java -jar re-0.1.0.jar
 
-within the tar.gz, in the same folder as the application, you will find the config/application.properties file.
+within the same folder as the application, you will find the config/application.properties file.
 
-The parameters I've prepared are:
+**The parameters I've prepared are:**
+
 hibernate.jdbc.batch_size = 200000
    the ammount of records to be inserted on the database within a bulk insert
 
@@ -52,12 +55,12 @@ initializer.skip=true
 dotproduct.weighted=true
    give you the option to calculate cosin similarity with or without the weights
 
-> a(10) to j(1)
+\# a(10) to j(1)
 dotproduct.weigths=10,9,8,7,6,5,4,3,2,1
    the weights from a to j
 
 
-Running
+## Notes
 in a modest mac mini it takes 3 minutes to generate all 1/2 * m (m-1) comparisons and 15 hours to load all the 199,990,000 similarities.
 
 The last change I did, was to add the index I forgot,  on the similarity entity. So depends on the hardware it may not run very well.
