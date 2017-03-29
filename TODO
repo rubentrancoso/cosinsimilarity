@@ -1,0 +1,43 @@
+Test task for home24 candidate
+Software engineer
+
+General
+You would be kindly asked to create a recommendation engine from scratch for the problem described below.
+Architectural background
+
+To be able to manage our articles in an efficient way, we use attributes to describe all aspects of an article.
+
+Product background
+
+One of the challenges we’re facing, is finding the right product for our customers. They might search for something
+very specific, but in some cases they cannot find it immediately, as we might have a lot of variations of a product
+available.
+
+That’s why we’re working on better product recommendations, to ensure we can make good proposals for our customers.
+
+The task
+
+We extract some article data and anonymized it. You can find the json file in the attached tgz file. Each article, 
+identified by it’s sku, contains a set of attributes. Each attribute has an assigned value.
+
+Out of this data, we want you to build an engine, which can calculate the similarity of articles. The similarity 
+should be based on the attribute values. To get some ranking into the engine, we define the following:
+
+An attribute which is higher in the alphabet, has to be weighted heavier, means att-a has an heavier weight than att-z.
+The absolute weighting values can be chosen by you, as long as you maintain the described order.
+
+The expected engine should use one sku as an input parameter, and output the 10 most similar skus including the 
+calculated weights for them.
+
+You can choose whichever language you’re most familiar with. The code should be structured and reuseable.
+
+Please deliver the solution in a tgz file including an instruction on how to run it.
+
+Feedback
+
+We’re always trying to improve our tests. We would appreciate your feedback on the following questions:
+
+●	How did you like the test?
+●	How much time did you spend on it?
+●	Do you think the amount of time is ok for a test task within an interview process?
+●	If you could ask us to change one thing on the test, what would it be?
