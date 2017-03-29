@@ -4,25 +4,28 @@ The solution is a self-contained spring boot application that provides a simple 
 
 localhost:8080/recommend/45 -> will return 
 
+```
 {
-result: 
-[
-{
-id: 1321506,
-sku: 67,
-similarity: 0.9360594897015758,
-similarSku: 3784
-},
-... some more
-{
-id: 503433,
-sku: 26,
-similarity: 0.9139760899701568,
-similarSku: 3784
+   result: [
+         {
+            id: 1321506,
+            sku: 67,
+            similarity: 0.9360594897015758,
+            similarSku: 3784
+         },
+         
+         ... some more
+         
+         {
+            id: 503433,
+            sku: 26,
+            similarity: 0.9139760899701568,
+            similarSku: 3784
+         }
+   ],
+   status: success"
 }
-],
-status: "success"
-}
+```
 
 You will need an MYSQL instance with a schema and a user/password with the privileges on it.
 spring.datasource.url = jdbc:mysql://localhost:3306/myschema
