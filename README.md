@@ -43,7 +43,7 @@ To run it, use
 java -jar re-0.1.0.jar
 ```
 
-within the same folder as the application, you will find the config/application.properties file.
+within the same folder as the application, you will find the `config/application.properties` file.
 
 ## Config
 
