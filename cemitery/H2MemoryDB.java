@@ -1,4 +1,4 @@
-package de.home24.test.db;
+package xpto;
 
 import org.springframework.stereotype.Component;
 import java.sql.Connection;
@@ -13,8 +13,8 @@ import org.junit.Test;
 @Component
 public class H2MemoryDB {
 
-	private static final String DATABASE_URL = "jdbc:h2:mem:home24";
-	// jdbc:h2:~/home24;LOG=0;CACHE_SIZE=65536;LOCK_MODE=0;UNDO_LOG=0
+	private static final String DATABASE_URL = "jdbc:h2:mem:myschema";
+	// jdbc:h2:~/myschema;LOG=0;CACHE_SIZE=65536;LOCK_MODE=0;UNDO_LOG=0
 	private static Connection conn;
 
 	@BeforeClass
