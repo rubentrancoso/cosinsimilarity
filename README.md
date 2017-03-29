@@ -92,7 +92,7 @@ in a modest mac mini it takes 3 minutes to generate all 1/2 * m (m-1) comparison
 The last change I did, was to add the index I forgot,  on the similarity entity. So depends on the hardware it may not run very well.
 I did a try for two in memory libs on my way to this outcome, and I could also tell you that mongo or prevayler should be some options, but time and loneliness do not help too much in this case. All must be discussed according to the needs.
 
- So, that is a bit of the discussion that this solution will raise and I will be happy to have this conversation with you all.
+ So, that is a bit of the discussion that this solution will raise and I will be happy to have this conversation.
  
 ## Stackoverflow
 
