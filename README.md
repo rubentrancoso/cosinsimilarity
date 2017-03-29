@@ -23,7 +23,7 @@ localhost:8080/recommend/45 -> will return
             similarSku: 3784
          }
    ],
-   status: success"
+   status: "success"
 }
 ```
 
