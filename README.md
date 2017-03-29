@@ -2,7 +2,7 @@
 
 The solution is a self-contained spring boot application that provides a simple rest service to find the top 10 similar items. 
 
-[localhost:8080/recommend/45](localhost:8080/recommend/45) will return 
+`localhost:8080/recommend/45` will return 
 
 ```
 {
