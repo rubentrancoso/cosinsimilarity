@@ -72,7 +72,7 @@ initializer.lambda=false
 ```
 initializer.skip=true
 ```
-   to use a already set database and jump over the initialization ( remember to change spring.jpa.hibernate.ddl-auto to update so you do not get the schema totally droped )
+   to use a already set database and jump over the initialization ( remember to change `spring.jpa.hibernate.ddl-auto` to `update` so you do not get the schema totally droped )
 
 ```
 dotproduct.weighted=true
