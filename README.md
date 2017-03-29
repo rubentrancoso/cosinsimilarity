@@ -62,12 +62,12 @@ initializer.file.output=/tmp/output.csv
 ```
 initializer.file.data=data.json
 ```
-   the json file to be loaded: data.jon or shordata.json that contains only 100 records.
+   the json file to be loaded: `data.jon` or `shordata.json` that contains only 100 records.
 
 ```
 initializer.lambda=false
 ```
-   a test made with a lambda function to load data from output.csv into the database
+   a test made with a lambda function to load data from `output.csv` into the database
 
 ```
 initializer.skip=true
