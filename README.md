@@ -79,8 +79,8 @@ dotproduct.weighted=true
 ```
    give you the option to calculate cosin similarity with or without the weights
 
-\# a(10) to j(1)
 ```
+# a(10) to j(1)
 dotproduct.weigths=10,9,8,7,6,5,4,3,2,1
 ```
    the weights from a to j
