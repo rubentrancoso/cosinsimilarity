@@ -13,8 +13,9 @@ public interface SimilarityRepository extends CrudRepository<Similarity, Long>, 
 	
 	public Similarity findBySku(long sku);
 
-	@Query(value = "SELECT * FROM similarity WHERE ( sku = ?1 OR similar_sku = ?1 ) ORDER BY similarity DESC LIMIT ?2", nativeQuery = true)
+	@Query(value = "(SELECT * FROM similarity WHERE sku =?1 ORDER BY similarity DESC  LIMIT ?2) UNION DISTINCT ( SELECT * FROM similarity WHERE similar_sku=?1 ORDER BY similarity DESC  LIMIT ?2) ORDER BY similarity DESC  LIMIT ?2", nativeQuery = true)
 	public List<Similarity> getSimilar(long sku, int limit);
 	
 	
 }
+

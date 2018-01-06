@@ -8,7 +8,7 @@ import javax.persistence.Index;
 import javax.persistence.Table;
 
 @Entity
-@Table(indexes = { @Index(name = "IDX_SIM", columnList = "sku,similar_sku") })
+@Table(indexes = { @Index(name = "IDX_LEFT", columnList = "sku,similarity") , @Index(name = "IDX_RIGHT", columnList = "similar_sku,similarity") })
 public class Similarity {
 
 	@Id
