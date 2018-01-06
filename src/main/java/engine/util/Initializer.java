@@ -66,6 +66,10 @@ public class Initializer {
 			logger.info("Skip Initialization...");
 			return;
 		}
+		private_init();
+	}
+	
+	public void private_init() {
 		logger.info("Initializing...");
 		delteOutput();
 		populate();
@@ -136,9 +140,11 @@ public class Initializer {
 
 	@Transactional
 	private long calculate() {
+		logger.info("calculate");
 		File f = new File(outputFile);
 		if (f.exists() && !f.isDirectory()) {
 			try {
+				logger.info("count lines");
 				return Util.countLines(outputFile);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -247,6 +253,18 @@ public class Initializer {
 		}
 		long end = Instant.now().toEpochMilli();
 		logger.info(String.format("Load completed in %d milliseconds", (end - start)));
+	}
+
+	public void load() {
+		long total = calculate();
+		if (useLambda) {
+			logger.info("lambda enabled.");
+			load_lambda();
+		} else {
+			logger.info("lambda disabled.");
+			load(total);
+		}
+		logger.info("Initialization end.");
 	}
 
 }

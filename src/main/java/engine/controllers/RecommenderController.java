@@ -47,4 +47,21 @@ public class RecommenderController {
         return new ResponseEntity<Object>(message, responseCode);
     }
 
+    @RequestMapping(value = "/load", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	ResponseEntity<Object> load() {
+		logger.info("processing request");
+		HttpStatus responseCode = HttpStatus.OK;
+		Object message = new Message("sucess");
+        try {
+        	recommenderService.load();
+        } catch (Exception e) {
+            logger.error("Error occurred while trying to process api request", e);
+            message = new Message("Error occurred while trying to process api request.");
+    		responseCode = HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+        return new ResponseEntity<Object>(message, responseCode);
+    }
+
+
 }
